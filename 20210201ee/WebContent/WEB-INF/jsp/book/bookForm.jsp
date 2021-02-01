@@ -33,7 +33,7 @@ tr.row:hover {
 				<th width="100">도서 코드</th>
 				<th width="100">도서명</th>
 				<th width="100">기본 수량</th>
-				<th width="100">현재 수량</th>
+				<th width="100">현재 수량dd</th>
 				<th width="100">대여</th>
 				<th width="100">삭제</th>
 				<th width="100">수정</th>
