@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix="c" %>    
 <!DOCTYPE html>
 <html>
 <title>W3.CSS Template</title>
@@ -19,8 +20,8 @@ body {font-family: "Lato", sans-serif}
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="main.do" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">L</a>
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TOUR</a>
+    <a href="loginForm.do" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LOGIN</a>
+    <a href="bookForm.do" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BOOK</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">자유게시판</a>
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     

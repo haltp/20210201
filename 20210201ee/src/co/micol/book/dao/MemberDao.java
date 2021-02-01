@@ -22,10 +22,10 @@ public class MemberDao extends DAO {
 			rs = psmt.executeQuery();
 			while (rs.next()) {
 				vo = new MemberVo();
-				vo.setmId(rs.getString("mid"));
-				vo.setmName(rs.getString("mname"));
-				vo.setmTel(rs.getString("mtel"));
-				vo.setmAdd(rs.getString("madd"));
+				vo.setmId(rs.getString("MEMBERID"));
+				vo.setmName(rs.getString("MEMBERNAME"));
+				vo.setmTel(rs.getString("MEMBERTEL"));
+				vo.setmAdd(rs.getString("MEMBERADDRESS"));
 				list.add(vo);
 			}
 		} catch (SQLException e) {
@@ -93,7 +93,46 @@ public class MemberDao extends DAO {
 		}
 		return n;
 	}
-	
+
+	// 로그인
+	public MemberVo login(MemberVo vo) {
+		String sql = "SELECT * FROM MEM WHERE MEMBERID = ?";
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, vo.getmId());
+			rs = psmt.executeQuery();
+			if (rs.next()) {
+				vo.setmName(rs.getString("MEMBERNAME"));
+				vo.setmAu(rs.getString("MEMBERAU"));
+
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return vo;
+	}
+
+	// 아이디 중복 체크
+	public boolean isIdCheck(String id) { // id중복체크를 위한 메소드
+		boolean bool = true;
+		String sql = "SELECT MEMBERID FROM MEMR WHERE MEMBERID = ?";
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, id);
+			rs = psmt.executeQuery();
+			if (rs.next()) {
+				bool = false;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return bool;
+	}
+
 	private void close() {
 		try {
 			if (rs != null)
