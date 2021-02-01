@@ -21,7 +21,7 @@
 				<td align="center"><input type="text" id = "bName" name = "bName" size = "10" value="${vo.bCount }"></td>
 			</tr>
 		</table><br/>
-		<button type="submit">등록</button>&nbsp;&nbsp;&nbsp;
+		<button type="submit">등록</button>&nbsp;&nbsp;&nbsp;&nbsp;
 		<button type="reset">취소</button>&nbsp;&nbsp;&nbsp;
 		<button type="button" onclick = "location.href='bookForm.do'">목록</button>
 	</form><br/>
