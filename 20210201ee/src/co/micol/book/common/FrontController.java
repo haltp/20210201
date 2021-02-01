@@ -18,6 +18,7 @@ import co.micol.book.web.InsertForm;
 import co.micol.book.web.JoinForm;
 import co.micol.book.web.Login;
 import co.micol.book.web.LoginForm;
+import co.micol.book.web.Logout;
 import co.micol.book.web.MainCommand;
 import co.micol.book.web.MemberIdCheck;
 import co.micol.book.web.MemberJoin;
@@ -45,6 +46,7 @@ public class FrontController extends HttpServlet {
 		map.put("/joinForm.do", new JoinForm()); //회원가입 폼 호출
 		map.put("/memberjoin.do", new MemberJoin());//회원가입완료
 		map.put("/idCheck.do", new MemberIdCheck());//아이디 체크
+		map.put("/logout.do", new Logout());  //로그아웃
 	}
 
 	
