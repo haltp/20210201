@@ -11,7 +11,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import co.micol.book.web.BoardDelete;
+import co.micol.book.web.BoardInsert;
 import co.micol.book.web.BookForm;
+import co.micol.book.web.InsertForm;
 import co.micol.book.web.JoinForm;
 import co.micol.book.web.Login;
 import co.micol.book.web.LoginForm;
@@ -36,6 +39,9 @@ public class FrontController extends HttpServlet {
 		map.put("/loginForm.do", new LoginForm()); //로그인
 		map.put("/login.do", new Login()); //로그인처리
 		map.put("/bookForm.do", new BookForm()); //도서 폼 호출
+		map.put("/insertForm.do", new InsertForm()); // 새 도서 폼
+		map.put("/bookInsert.do", new BoardInsert()); //등록
+		map.put("/bookDelete.do", new BoardDelete()); //삭제
 		map.put("/joinForm.do", new JoinForm()); //회원가입 폼 호출
 		map.put("/memberjoin.do", new MemberJoin());//회원가입완료
 		map.put("/idCheck.do", new MemberIdCheck());//아이디 체크
