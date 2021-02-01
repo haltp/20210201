@@ -17,8 +17,8 @@
 			<tr>
 				<td align="center"><input type="text" id = "bCode" name = "bCode" size = "30"></td>
 				<td><input type="text" id = "bName" name = "bName" size = "30"></td>
-				<td align="center"><input type="text" id = "quanti" name = "quanti" size = "10"></td>
-				<td align="center"><input type="text" id = "bCount" name = "bCount" size = "10"></td>
+				<td align="center"><input type="text" id = "quanti" name = "quanti" size = "10" value = 5></td>
+				<td align="center"><input type="text" id = "bCount" name = "bCount" size = "10" value = 5></td>
 			</tr>
 		</table><br/>
 		<button type="submit">등록</button>&nbsp;&nbsp;&nbsp;

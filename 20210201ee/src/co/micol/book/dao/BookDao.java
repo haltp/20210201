@@ -76,11 +76,12 @@ public class BookDao extends DAO {
 	
 	public int update(BookVo vo) {
 		int n = 0;
-		String sql = "UPDATE BOOK SET BOOKNAME = ?, BCOUNT = ?";
+		String sql = "UPDATE BOOK SET BOOKNAME = ?, BCOUNT = ? WHERE BOOKCODE = ?";
 		try {
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, vo.getbName());
 			psmt.setInt(2, vo.getbCount());
+			psmt.setString(3, vo.getbCode());
 			n = psmt.executeUpdate();
 		}catch(SQLException e) {
 			e.printStackTrace();

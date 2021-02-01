@@ -1,4 +1,4 @@
-package co.micol.book.web;
+package co.micol.member.web;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

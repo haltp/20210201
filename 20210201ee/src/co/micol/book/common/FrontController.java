@@ -11,17 +11,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import co.micol.book.web.BoardDelete;
-import co.micol.book.web.BoardInsert;
+import co.micol.book.web.BookInsert;
+import co.micol.book.web.BookUpdate;
+import co.micol.book.web.BookUpdateForm;
+import co.micol.book.web.BookDelete;
 import co.micol.book.web.BookForm;
 import co.micol.book.web.InsertForm;
-import co.micol.book.web.JoinForm;
-import co.micol.book.web.Login;
-import co.micol.book.web.LoginForm;
-import co.micol.book.web.Logout;
-import co.micol.book.web.MainCommand;
-import co.micol.book.web.MemberIdCheck;
-import co.micol.book.web.MemberJoin;
+import co.micol.member.web.JoinForm;
+import co.micol.member.web.Login;
+import co.micol.member.web.LoginForm;
+import co.micol.member.web.Logout;
+import co.micol.member.web.MainCommand;
+import co.micol.member.web.MemberIdCheck;
+import co.micol.member.web.MemberJoin;
 
 
 @WebServlet("/FrontController")
@@ -41,12 +43,15 @@ public class FrontController extends HttpServlet {
 		map.put("/login.do", new Login()); //로그인처리
 		map.put("/bookForm.do", new BookForm()); //도서 폼 호출
 		map.put("/insertForm.do", new InsertForm()); // 새 도서 폼
-		map.put("/bookInsert.do", new BoardInsert()); //등록
-		map.put("/bookDelete.do", new BoardDelete()); //삭제
+		map.put("/bookInsert.do", new BookInsert()); //등록
+		map.put("/bookDelete.do", new BookDelete()); //삭제
+		map.put("/bookUpdateFrom.do", new BookUpdateForm()); //책 수정 폼 호출
+		map.put("/bookUpdate.do", new BookUpdate()); //책 수정
 		map.put("/joinForm.do", new JoinForm()); //회원가입 폼 호출
 		map.put("/memberjoin.do", new MemberJoin());//회원가입완료
 		map.put("/idCheck.do", new MemberIdCheck());//아이디 체크
 		map.put("/logout.do", new Logout());  //로그아웃
+
 	}
 
 	

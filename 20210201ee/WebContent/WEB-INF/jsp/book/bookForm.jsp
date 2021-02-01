@@ -16,8 +16,6 @@ tr.row:hover {
 		if (yn) {
 			frm.action = "bookDelete.do";
 			frm.submit();
-		} else {
-
 		}
 	}
 </script>
@@ -39,7 +37,7 @@ tr.row:hover {
 				<th width="100">삭제</th>
 				<th width="100">수정</th>
 				</c:if>
-				
+
 			</tr>
 			<c:forEach var = "vo" items="${list }">
 			<tr class="row">
@@ -50,7 +48,7 @@ tr.row:hover {
 				<td align="center"><button type="submit" onclick = "getBook()">대여</button></td>
 				<c:if test="${not empty mid and mauth =='MASTER'}">
 				<td align="center"><button type="submit" onclick = "deleteBook()">삭제</button></td>
-				<td align="center"><button type="submit" onclick = "">수정</button></td>
+				<td align="center"><button type="button" onclick = "location.href='bookUpdateFrom.do?bCode=${vo.bCode }'">수정</button></td>
 				</c:if>
 			</tr>
 			</c:forEach>
