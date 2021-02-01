@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import co.micol.book.web.BookForm;
+import co.micol.book.web.LoginForm;
 import co.micol.book.web.MainCommand;
 
 /**
@@ -34,6 +36,8 @@ public class FrontController extends HttpServlet {
 	public void init(ServletConfig config) throws ServletException {
 		// TODO Auto-generated method stub
 		map.put("/main.do", new MainCommand());
+		map.put("/loginForm.do", new LoginForm()); //로그인
+		map.put("/bookForm.do", new BookForm()); //도서 폼 호출
 	}
 
 	/**
